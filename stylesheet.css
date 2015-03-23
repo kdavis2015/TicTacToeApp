@@ -1,0 +1,21 @@
+/* New CSS File */
+#controls {
+	color:purple;
+}
+#players {
+	color:blue;
+}
+#player1 {
+	color:red;
+}
+#player2 {
+	color:green;
+}
+#playerformat {
+	background:yellow;
+	width:320px;
+}
+#board {
+	background:gray;
+	width:320px;
+}
