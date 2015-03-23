@@ -4,12 +4,15 @@
 }
 #players {
 	color:blue;
+	text-align:center;
 }
 #player1 {
 	color:red;
+	text-align:left;
 }
 #player2 {
 	color:green;
+	text-align:right;
 }
 #playerformat {
 	background:yellow;
