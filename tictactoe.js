@@ -32,14 +32,19 @@ function dowehaveaWinner() {
 	var col = [0,0,0];
 	var diag = [0,0];
 	
-	for (i = 0;i<3,row++) {
-		row[i] = winner_tracking[1+(i*3)] + winner_tracking[2+(i*3)] + winner_tracking[3+(i*3)];
-		col[i] = winner_tracking[(1+i)] + winner_tracking[(4+i)] + winner_tracking[(7+i)];
+	for (i = 0;i<3;i++) {
+		row[i] = winner_tracking[0+(i*3)] + winner_tracking[1+(i*3)] + winner_tracking[2+(i*3)];
+		col[i] = winner_tracking[(0+i)] + winner_tracking[(3+i)] + winner_tracking[(6+i)];
+		
+		console.log(" I: " + i + " row: " + row[i] + " col: " + col[i]);
 	}
 	
 	
-	diag[0] = winner_tracking[1] + winner_tracking[5] + winner_tracking[9];
-	diag[1] = winner_tracking[3] + winner_tracking[5] + winner_tracking[7];
+	diag[0] = winner_tracking[0] + winner_tracking[4] + winner_tracking[8];
+	diag[1] = winner_tracking[2] + winner_tracking[4] + winner_tracking[6];
+	
+	console.log( "diag0: " + diag[0] + " diag1: " + diag[1]);
+	
 	
 	
 	if ((row[0] == 3) || (row[1] == 3) || (row[2] ==3) || (col[0] == 3) || (col[1] == 3) || 
@@ -47,8 +52,8 @@ function dowehaveaWinner() {
 		return 1;
 	}
 	
-	if ((row[0] == 15) || (row[1] == 15) || (row[2] == 15) || (col[0] == 15) || (col[1] == 15) || 
-		(col[2] == 15) || (diag[0] == 15) || (diag[1] == 15)) {
+	if ((row[0] == 12) || (row[1] == 12) || (row[2] == 12) || (col[0] == 12) || (col[1] == 12) || 
+		(col[2] == 12) || (diag[0] == 12) || (diag[1] == 12)) {
 		return 2;
 	}
 	
@@ -75,15 +80,20 @@ function getPicture(name) {
 }
 
 function playsquare(name) {
+
 	var square = document.getElementById(name);
 	var pos = square.src.lastIndexOf("blank",square.src)
-	var number = parseInt(square.src.charAt(square.src.length));
-	console.log("playsquare name: "+name+" square.src"+square.src+" pos: "+pos);
+	//var length = name.length;
+	//var character = name.charAt(length-1);
+	//var number = parseInt(character);
+	var number = parseInt(name.charAt(name.length-1));
+	console.log("playsquare name: "+name+" square.src"+square.src+" pos: "+pos+ " number: " + number);
+	//console.log("length: " + length + " character: " + character + " number: " + number);
 	
 	if (pos > 0) {
 		if (xoro == 1) {
 			// This is the O side of the house
-			winner_tracking[number] = 4;
+			winner_tracking[number-1] = 4;
 			xoro = 0
 			square.src = "o.png";
 			console.log("O play");
@@ -91,7 +101,7 @@ function playsquare(name) {
 		} else {
 			// This is the X side of the house
 			xoro = 1
-			winner_tracking[number] = 1;
+			winner_tracking[number-1] = 1;
 			square.src = "x.png";
 			console.log("X play");
 			totalplays++;
@@ -103,11 +113,11 @@ function playsquare(name) {
 	var winner = dowehaveaWinner(winner_tracking);
 	
 	if (winner == 1) {
-		alert("O is the winner");
+		alert("X is the winner");
 		navigate.vibrate(1000);
 		resetBoard();
 	} else if (winner == 2) {
-		alert("X is the winner");
+		alert("O is the winner");
 		navigate.vibrate(1000);
 		resetBoard();
 	} else {
