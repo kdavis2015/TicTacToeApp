@@ -1,5 +1,14 @@
 // x is 0 -- o is 1
 var xoro = 0;
+var imagename = ""
+
+document.addEventListener("deviceready",onDeviceReady,false);
+
+// PhoneGap is ready to be used!
+//
+function onDeviceReady() {
+	console.log(navigator.camera);
+}
 
 function resetBoard() {
 	xoro = 0;
@@ -10,14 +19,23 @@ function resetBoard() {
 		var square = document.getElementById("box" + (box));
 		square.src = "blank.png";
 	}
-
 	
+}
+
+function onSuccess(imageData) {
+    image = document.getElementById(imagename);
+    image.src = "data:image/jpeg;base64," + imageData;
+}
+
+function onFail(message) {
+    alert('Failed because: ' + message);
 }
 
 function getPicture(name) {
 
-	console.log("getPicture name: " + name);
-	var picture;
+	imagename = name;
+	console.log("getPicture name: " + imagename);
+	navigator.camera.getPicture(onSuccess, onFail, { quality: 50,destinationType: Camera.DestinationType.DATA_URL});
 
 }
 

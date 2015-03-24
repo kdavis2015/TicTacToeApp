@@ -10,7 +10,6 @@
 #player1 {
 	position:absolute;
 	color:red;
-	text-align:left;
 	top:50px;
 	left:100px;
 	width:32px;
@@ -19,7 +18,6 @@
 #player2 {
 	position:absolute;
 	color:green;
-	text-align:right;
 	top:50px;
 	left:175px;
 	width:32px;
