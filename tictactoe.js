@@ -14,10 +14,17 @@ function resetBoard() {
 	
 }
 
+function getPicture(name) {
+
+	console.log("getPicture name: " + name);
+	var picture;
+
+}
+
 function playsquare(name) {
 	var square = document.getElementById(name);
 	var pos = square.src.lastIndexOf("blank",square.src)
-	console.log("name: "+name+" square.src"+square.src+" pos: "+pos);
+	console.log("playsquare name: "+name+" square.src"+square.src+" pos: "+pos);
 	if (pos > 0) {
 		if (xoro == 1) {
 			xoro = 0
