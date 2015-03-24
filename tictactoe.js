@@ -1,6 +1,6 @@
 // x is 0 -- o is 1
 var xoro = 0;
-var imagename = ""
+var imagename = "";
 var totalplays = 0;
 var winner_tracking = [0,0,0,0,0,0,0,0,0];
 
