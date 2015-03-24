@@ -3,6 +3,7 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 		<title>TicTacToe</title>
+		<script type="text/javascript" src="tictactoe.js"></script>
 	</head>
 
 	
@@ -16,7 +17,7 @@
 		<div id="controls">
 		<h1>Controls</h1>
 		<ul>
-		<li>New Game</li>
+		<li><a href="" onclick="resetBoard()">New Game</a></li>
 		<li>Scoreboard</li>
 		</ul>
 		</div>
@@ -28,7 +29,16 @@
 		</div>
 		
 		<div id="board">
-		<img  src="board.png">
+		<img src="board.png">
+		<img src="blank.png" id="box1" onclick="playsquare('box1')">
+		<img src="blank.png" id="box2" onclick="playsquare('box2')">
+		<img src="blank.png" id="box3" onclick="playsquare('box3')">
+		<img src="blank.png" id="box4" onclick="playsquare('box4')">
+		<img src="blank.png" id="box5" onclick="playsquare('box5')">
+		<img src="blank.png" id="box6" onclick="playsquare('box6')">
+		<img src="blank.png" id="box7" onclick="playsquare('box7')">
+		<img src="blank.png" id="box8" onclick="playsquare('box8')">
+		<img src="blank.png" id="box9" onclick="playsquare('box9')">
 		</div>
 		
 		<div>Icon and Splash made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>

@@ -3,14 +3,17 @@
 	color:purple;
 }
 #players {
+	position:relative;
 	color:blue;
 	text-align:center;
 }
 #player1 {
+	position:relative;
 	color:red;
 	text-align:left;
 }
 #player2 {
+	position:relative;
 	color:green;
 	text-align:right;
 }
@@ -19,6 +22,87 @@
 	width:320px;
 }
 #board {
+	position:relative;
 	background:gray;
 	width:320px;
+}
+#box1 {
+	position:absolute;
+	height:50px;
+	width:50px;
+	display:box;
+	left:50px;
+	top:50px;
+}
+
+#box2 {
+	position:absolute;
+	height:50px;
+	width:50px;
+	display:box;
+	left:125px;
+	top:50px;
+}
+
+#box3 {
+	position:absolute;
+	height:50px;
+	width:50px;
+	display:box;
+	left:200px;
+	top:50px;
+}
+
+#box4 {
+	position:absolute;
+	height:50px;
+	width:50px;
+	display:box;
+	left:50px;
+	top:120px;
+}
+
+#box5 {
+	position:absolute;
+	height:50px;
+	width:50px;
+	display:box;
+	left:125px;
+	top:120px;
+}
+
+#box6 {
+	position:absolute;
+	height:50px;
+	width:50px;
+	display:box;
+	left:200px;
+	top:120px;
+}
+
+#box7 {
+	position:absolute;
+	height:50px;
+	width:50px;
+	display:box;
+	left:50px;
+	top:200px;
+}
+
+#box8 {
+	position:absolute;
+	height:50px;
+	width:50px;
+	display:box;
+	left:125px;
+	top:200px;
+}
+
+#box9 {
+	position:absolute;
+	height:50px;
+	width:50px;
+	display:box;
+	left:200px;
+	top:200px;
 }
