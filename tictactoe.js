@@ -25,7 +25,7 @@ function resetBoard() {
 function onSuccess(imageData) {
 	console.log("processing picture: " +imagename);
     image = document.getElementById(imagename);
-    image.firstChild.src = "data:image/jpeg;base64," + imageData;
+    image.src = "data:image/jpeg;base64," + imageData;
 }
 
 function onFail(message) {
