@@ -83,12 +83,8 @@ function playsquare(name) {
 
 	var square = document.getElementById(name);
 	var pos = square.src.lastIndexOf("blank",square.src)
-	//var length = name.length;
-	//var character = name.charAt(length-1);
-	//var number = parseInt(character);
 	var number = parseInt(name.charAt(name.length-1));
 	console.log("playsquare name: "+name+" square.src"+square.src+" pos: "+pos+ " number: " + number);
-	//console.log("length: " + length + " character: " + character + " number: " + number);
 	
 	if (pos > 0) {
 		if (xoro == 1) {
@@ -114,16 +110,16 @@ function playsquare(name) {
 	
 	if (winner == 1) {
 		alert("X is the winner");
-		navigate.vibrate(1000);
+		navigator.vibrate(1000);
 		resetBoard();
 	} else if (winner == 2) {
 		alert("O is the winner");
-		navigate.vibrate(1000);
+		navigator.vibrate(1000);
 		resetBoard();
 	} else {
 		if (totalplays == 9) {
 			alert("Tie game");
-			navigate.vibrate(1000);
+			navigator.vibrate(1000);
 			resetBoard();
 		}
 	}
