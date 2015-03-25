@@ -10,6 +10,7 @@ document.addEventListener("deviceready",onDeviceReady,false);
 //
 function onDeviceReady() {
 	console.log(navigator.camera);
+	window.localStorage.setItem("key", "value");
 }
 
 function resetBoard() {
@@ -110,16 +111,16 @@ function playsquare(name) {
 	
 	if (winner == 1) {
 		alert("X is the winner");
-		navigator.vibrate(1000);
+		navigator.vibrate(500);
 		resetBoard();
 	} else if (winner == 2) {
 		alert("O is the winner");
-		navigator.vibrate(1000);
+		navigator.vibrate(500);
 		resetBoard();
 	} else {
 		if (totalplays == 9) {
 			alert("Tie game");
-			navigator.vibrate(1000);
+			navigator.vibrate(500);
 			resetBoard();
 		}
 	}
